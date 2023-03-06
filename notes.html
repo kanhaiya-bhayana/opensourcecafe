@@ -1,0 +1,130 @@
+<div class="onlycontentinner">
+    <div id="city">
+    <table>
+    <tbody><tr><td>
+    <h1 class="h1">Call by value and Call by reference in C</h1>
+    <p>There are two methods to pass the data into the function in C language, i.e., <i>call by value</i> and <i>call by reference</i>.</p>
+    <img src="https://static.javatpoint.com/cpages/images/callbyvalue-callbyreference-in-c.png" alt="call by value and call by reference in c">
+    <p>Let's understand call by value and call by reference in c language one by one.</p>
+    <hr>
+    <h2 class="h2">Call by value in C</h2>
+    <ul class="points">
+    <li>In call by value method, the value of the actual parameters is copied into the formal parameters. In other words, we can say that the value of the variable is used in the function call in the call by value method.</li>
+    <li>In call by value method, we can not modify the value of the actual parameter by the formal parameter.</li>
+    <li>In call by value, different memory is allocated for actual and formal parameters since the value of the actual parameter is copied into the formal parameter.</li>
+    <li>The actual parameter is the argument which is used in the function call whereas formal parameter is the argument which is used in the function definition.</li>
+    </ul>
+    <p>Let's try to understand the concept of call by value in c language by the example given below:</p>
+    <div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">void</span><span>&nbsp;change(</span><span class="datatypes">int</span><span>&nbsp;num)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Before&nbsp;adding&nbsp;value&nbsp;inside&nbsp;function&nbsp;num=%d&nbsp;\n"</span><span>,num);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;num=num+100;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;adding&nbsp;value&nbsp;inside&nbsp;function&nbsp;num=%d&nbsp;\n"</span><span>,&nbsp;num);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main()&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;x=100;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Before&nbsp;function&nbsp;call&nbsp;x=%d&nbsp;\n"</span><span>,&nbsp;x);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;change(x);<span class="comment">//passing&nbsp;value&nbsp;in&nbsp;function&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;function&nbsp;call&nbsp;x=%d&nbsp;\n"</span><span>,&nbsp;x);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include&lt;stdio.h&gt;
+    void change(int num) {  
+        printf("Before adding value inside function num=%d \n",num);  
+        num=num+100;  
+        printf("After adding value inside function num=%d \n", num);  
+    }  
+    int main() {  
+        int x=100;  
+        printf("Before function call x=%d \n", x);  
+        change(x);//passing value in function  
+        printf("After function call x=%d \n", x);  
+    return 0;
+    }  
+    </textarea></div>
+    <h4 class="h4">Output</h4>
+    <div class="codeblock3"><pre>Before function call x=100
+    Before adding value inside function num=100
+    After adding value inside function num=200
+    After function call x=100
+    </pre></div>
+    <hr>
+    <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"><iframe id="aswift_0" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;"><iframe id="google_ads_frame0"></iframe></iframe></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <h4 class="h4">Call by Value Example: Swapping the values of the two variables</h4>
+    <div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">void</span><span>&nbsp;swap(</span><span class="datatypes">int</span><span>&nbsp;,&nbsp;</span><span class="datatypes">int</span><span>);&nbsp;</span><span class="comment">//prototype&nbsp;of&nbsp;the&nbsp;function&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;a&nbsp;=&nbsp;10;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;b&nbsp;=&nbsp;20;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Before&nbsp;swapping&nbsp;the&nbsp;values&nbsp;in&nbsp;main&nbsp;a&nbsp;=&nbsp;%d,&nbsp;b&nbsp;=&nbsp;%d\n"</span><span>,a,b);&nbsp;</span><span class="comment">//&nbsp;printing&nbsp;the&nbsp;value&nbsp;of&nbsp;a&nbsp;and&nbsp;b&nbsp;in&nbsp;main</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;swap(a,b);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;swapping&nbsp;values&nbsp;in&nbsp;main&nbsp;a&nbsp;=&nbsp;%d,&nbsp;b&nbsp;=&nbsp;%d\n"</span><span>,a,b);&nbsp;</span><span class="comment">//&nbsp;The&nbsp;value&nbsp;of&nbsp;actual&nbsp;parameters&nbsp;do&nbsp;not&nbsp;change&nbsp;by&nbsp;changing&nbsp;the&nbsp;formal&nbsp;parameters&nbsp;in&nbsp;call&nbsp;by&nbsp;value,&nbsp;a&nbsp;=&nbsp;10,&nbsp;b&nbsp;=&nbsp;20</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;swap&nbsp;(</span><span class="datatypes">int</span><span>&nbsp;a,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;b)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;temp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;=&nbsp;a;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;a=b;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;b=temp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;swapping&nbsp;values&nbsp;in&nbsp;function&nbsp;a&nbsp;=&nbsp;%d,&nbsp;b&nbsp;=&nbsp;%d\n"</span><span>,a,b);&nbsp;</span><span class="comment">//&nbsp;Formal&nbsp;parameters,&nbsp;a&nbsp;=&nbsp;20,&nbsp;b&nbsp;=&nbsp;10&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;stdio.h&gt;
+    void swap(int , int); //prototype of the function 
+    int main()
+    {
+        int a = 10;
+        int b = 20; 
+        printf("Before swapping the values in main a = %d, b = %d\n",a,b); // printing the value of a and b in main
+        swap(a,b);
+        printf("After swapping values in main a = %d, b = %d\n",a,b); // The value of actual parameters do not change by changing the formal parameters in call by value, a = 10, b = 20
+    }
+    void swap (int a, int b)
+    {
+        int temp; 
+        temp = a;
+        a=b;
+        b=temp;
+        printf("After swapping values in function a = %d, b = %d\n",a,b); // Formal parameters, a = 20, b = 10 
+    }
+    </textarea></div>
+    <h4 class="h4">Output</h4>
+    <div class="codeblock3"><pre>Before swapping the values in main a = 10, b = 20
+    After swapping values in function a = 20, b = 10
+    After swapping values in main a = 10, b = 20  
+    </pre></div>
+    <h2 class="h2">Call by reference in C</h2>
+    <ul class="points">
+    <li>In call by reference, the address of the variable is passed into the function call as the actual parameter.</li>
+    <li>The value of the actual parameters can be modified by changing the formal parameters since the address of the actual parameters is passed.</li>
+    <li>In call by reference, the memory allocation is similar for both formal parameters and actual parameters. All the operations in the function are performed on the value stored at the address of the actual parameters, and the modified value gets stored at the same address.</li>
+    </ul>
+    <p>Consider the following example for the call by reference.</p>
+    <div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">void</span><span>&nbsp;change(</span><span class="datatypes">int</span><span>&nbsp;*num)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Before&nbsp;adding&nbsp;value&nbsp;inside&nbsp;function&nbsp;num=%d&nbsp;\n"</span><span>,*num);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;(*num)&nbsp;+=&nbsp;100;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;adding&nbsp;value&nbsp;inside&nbsp;function&nbsp;num=%d&nbsp;\n"</span><span>,&nbsp;*num);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main()&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;x=100;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Before&nbsp;function&nbsp;call&nbsp;x=%d&nbsp;\n"</span><span>,&nbsp;x);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;change(&amp;x);<span class="comment">//passing&nbsp;reference&nbsp;in&nbsp;function&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;function&nbsp;call&nbsp;x=%d&nbsp;\n"</span><span>,&nbsp;x);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include&lt;stdio.h&gt;
+    void change(int *num) {  
+        printf("Before adding value inside function num=%d \n",*num);  
+        (*num) += 100;  
+        printf("After adding value inside function num=%d \n", *num);  
+    }    
+    int main() {  
+        int x=100;  
+        printf("Before function call x=%d \n", x);  
+        change(&amp;x);//passing reference in function  
+        printf("After function call x=%d \n", x);  
+    return 0;
+    }  
+    </textarea></div>
+    <h4 class="h4">Output</h4>
+    <div class="codeblock3"><pre>Before function call x=100
+    Before adding value inside function num=100
+    After adding value inside function num=200
+    After function call x=200
+    </pre></div>
+    <h4 class="h4">Call by reference Example: Swapping the values of the two variables</h4>
+    <div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">void</span><span>&nbsp;swap(</span><span class="datatypes">int</span><span>&nbsp;*,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;*);&nbsp;</span><span class="comment">//prototype&nbsp;of&nbsp;the&nbsp;function&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;a&nbsp;=&nbsp;10;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;b&nbsp;=&nbsp;20;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Before&nbsp;swapping&nbsp;the&nbsp;values&nbsp;in&nbsp;main&nbsp;a&nbsp;=&nbsp;%d,&nbsp;b&nbsp;=&nbsp;%d\n"</span><span>,a,b);&nbsp;</span><span class="comment">//&nbsp;printing&nbsp;the&nbsp;value&nbsp;of&nbsp;a&nbsp;and&nbsp;b&nbsp;in&nbsp;main</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;swap(&amp;a,&amp;b);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;swapping&nbsp;values&nbsp;in&nbsp;main&nbsp;a&nbsp;=&nbsp;%d,&nbsp;b&nbsp;=&nbsp;%d\n"</span><span>,a,b);&nbsp;</span><span class="comment">//&nbsp;The&nbsp;values&nbsp;of&nbsp;actual&nbsp;parameters&nbsp;do&nbsp;change&nbsp;in&nbsp;call&nbsp;by&nbsp;reference,&nbsp;a&nbsp;=&nbsp;10,&nbsp;b&nbsp;=&nbsp;20</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;swap&nbsp;(</span><span class="datatypes">int</span><span>&nbsp;*a,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;*b)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;temp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;=&nbsp;*a;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;*a=*b;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;*b=temp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"After&nbsp;swapping&nbsp;values&nbsp;in&nbsp;function&nbsp;a&nbsp;=&nbsp;%d,&nbsp;b&nbsp;=&nbsp;%d\n"</span><span>,*a,*b);&nbsp;</span><span class="comment">//&nbsp;Formal&nbsp;parameters,&nbsp;a&nbsp;=&nbsp;20,&nbsp;b&nbsp;=&nbsp;10&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;stdio.h&gt;
+    void swap(int *, int *); //prototype of the function 
+    int main()
+    {
+        int a = 10;
+        int b = 20; 
+        printf("Before swapping the values in main a = %d, b = %d\n",a,b); // printing the value of a and b in main
+        swap(&amp;a,&amp;b);
+        printf("After swapping values in main a = %d, b = %d\n",a,b); // The values of actual parameters do change in call by reference, a = 10, b = 20
+    }
+    void swap (int *a, int *b)
+    {
+        int temp; 
+        temp = *a;
+        *a=*b;
+        *b=temp;
+        printf("After swapping values in function a = %d, b = %d\n",*a,*b); // Formal parameters, a = 20, b = 10 
+    }
+    </textarea></div>
+    <h4 class="h4">Output</h4>
+    <div class="codeblock3"><pre>Before swapping the values in main a = 10, b = 20
+    After swapping values in function a = 20, b = 10
+    After swapping values in main a = 20, b = 10  
+    </pre></div>
+    <hr>
+    <h2 class="h2">Difference between call by value and call by reference in c</h2>
+    <table class="alt">
+    <tbody><tr><th>No.</th><th>Call by value</th><th>Call by reference</th></tr>
+    <tr><td>1</td><td>A copy of the value is passed into the function</td><td>An address of value is passed into the function</td></tr>
+    <tr><td>2</td><td>Changes made inside the function is limited to the function only. The values of the actual parameters do not change by changing the formal parameters.</td><td>Changes made inside the function validate outside of the function also. The values of the actual parameters do change by changing the formal parameters.</td></tr>
+    <tr><td>3</td><td>Actual and formal arguments are created at the different memory location</td><td>Actual and formal arguments are created at the same memory location</td></tr>
+    </tbody></table>
+    
